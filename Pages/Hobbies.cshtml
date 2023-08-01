@@ -1,0 +1,12 @@
+﻿@page
+@using RazorPagesApp.Pages
+@model RazorPagesApp.Pages.HobbiesModel
+@{
+}
+
+<ul>
+    @foreach (var hobby in Model.Hobbies)
+    {
+        <li>@hobby.Name: @hobby.Description</li>
+    }
+</ul>

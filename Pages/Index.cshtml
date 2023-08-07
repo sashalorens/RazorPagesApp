@@ -1,10 +1,29 @@
-﻿@page "/Index"
+﻿@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="index">
+    <div class="info">
+        <h1 class="info__title">Design Services</h1>
+        <p class="info__text">
+            Simple Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis elementum.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="buttons__button buttons__button--primary">About Us</a>
+            <a href="#" class="buttons__button">Our Works</a>
+        </div>
+
+        <ul class="services">
+            @foreach (var service in Model.Services)
+            {
+                <li class="services__item">
+                    <img class="services__image" src="~/img/@service.ImageName" alt="Not found" />
+                    <div class="services__title">@service.Title</div>
+                </li>
+            }
+        </ul>
+    </div>
 </div>

@@ -1,0 +1,12 @@
+﻿@page
+@model RazorPagesApp.Pages.SellerModel
+@{
+}
+
+<div>
+    @foreach (var seller in Model.Sellers)
+    {
+        <div>@seller.Name</div>
+        <div>@seller.City</div>
+    }
+</div>

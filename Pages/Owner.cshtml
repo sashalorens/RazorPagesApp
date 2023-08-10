@@ -1,0 +1,12 @@
+﻿@page
+@model RazorPagesApp.Pages.OwnerModel
+@{
+}
+
+<div>
+    @foreach (var owner in Model.Owners)
+    {
+        <div>@owner.Name</div>
+        <div>@owner.City</div>
+    }
+</div>

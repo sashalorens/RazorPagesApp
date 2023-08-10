@@ -1,0 +1,13 @@
+﻿@page
+@model RazorPagesApp.Pages.CarModel
+@{
+}
+
+<div>
+    @foreach (var car in Model.Cars)
+    {
+        <div>@car.Name</div>
+        <div>@car.Manufacturer</div>
+        <div>@car.Year</div>
+    }
+</div>

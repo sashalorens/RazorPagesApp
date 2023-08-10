@@ -1,3 +1,5 @@
+using RazorPagesApp.Models;
+
 namespace RazorPagesApp
 {
     public class Program
@@ -9,6 +11,7 @@ namespace RazorPagesApp
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.WebHost.UseStaticWebAssets();
+            builder.Services.AddDbContext<AppDBContext>();
 
             var app = builder.Build();
 
